@@ -1,4 +1,10 @@
-number1 = input("What is your first number?")
+# This is a program that determines the average of three numbers
+# Author: Mr. Jugoon
+# UCC September 11th, 2019
+# Version 1.0
+# Still needed: add in a fourth number
+
+number1 = input("What is your first number?") # input received from keyboard by user
 print("Your first number is " + number1)
 
 number2 = input("What is your second number?")
