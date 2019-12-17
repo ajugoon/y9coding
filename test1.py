@@ -1,4 +1,0 @@
-
-# Alvin Jugoon
-
-print ("hello")
