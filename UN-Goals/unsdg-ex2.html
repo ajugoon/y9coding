@@ -1,0 +1,75 @@
+
+<!-- Welcome to some sample code to assist with accessing info from online sources -->
+<!-- This code can later by copy-and-pasted into your Google Sites page -->
+<!-- This can be done by embedding the HTML code into the page within Google -->
+
+<!-- Example Website: https://unstats.un.org/SDGAPI/swagger/ -->
+
+<!-- Request URL: https://unstats.un.org/SDGAPI/v1/sdg/Goal/List?includechildren=true -->
+
+<!-- HERE IS YOUR HTML TO SET UP YOUR PAGE -->
+<html>
+    <!-- **************************************************************************************** -->
+    <!-- The HEAD section is where you load scripts and other meta-data -->
+    <head>
+      <!-- This script allows us to use JQUERY without having to download it -->
+      <!-- This is always required and must be listed first within the HEAD section-->
+        
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+
+    <!-- **************************************************************************************** -->
+    <!-- The BODY section is where you create all of the features associated with you webpage -->
+    <body >
+            
+      <!-- HERE IS YOUR HTML CODE TO SET UP DISPLAY TEXT -->
+      <h3>A simple demonstration of how to get information from an online database.</h3>
+      <h3>In this example information is shown on the webpage itself, as well as in the console.</h3>
+      <h3>The information is a subset taken from the following page:</h3>
+      <a href="https://unstats.un.org/SDGAPI/swagger/">The UN Statistics Website</a>
+
+      <p>THE UN SDG's are:</p>
+
+      <!-- ol means ordered list -->
+      <p><ol id="UNGoalList"></ol></p>  
+
+    </body>
+    
+    <!-- **************************************************************************************** -->
+    <!-- The SCRIPT section is where you place all of the code and functions that are required -->
+
+    <script>
+
+      // Variables created here to be used throughout the program
+      var staticURL = "https://unstats.un.org/SDGAPI/v1/sdg/Goal/List?includechildren=true"
+
+      // clear items from previously created lists
+      document.getElementById("UNGoalList").innerHTML = "";
+
+      // Here we start making use of JQuery...
+      $.getJSON(staticURL, function(data){
+
+          for (i = 0; i < data.length; i++){
+            //This is the code that will display contents to the console
+            console.log("UN GOAL: "+ data[i].title);
+
+            // DISPLAY EACH GOAL ON THE WEBPAGE
+            // Create a reference to the ordered list called 'UNGoalList'
+            // called 'oListUNGoals'
+            var oListUNGoals = document.getElementById('UNGoalList');
+            var entry = document.createElement('li'); // a list element to be added to the ordered list
+            entry.appendChild(document.createTextNode(data[i].title));
+            oListUNGoals.appendChild(entry);
+              
+          }//end for loop
+
+        }//end function
+
+      );//end getJSON command
+
+            
+      // ***************************************************************************************** -->
+
+    </script>
+</html>
