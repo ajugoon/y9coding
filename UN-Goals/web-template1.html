@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Four Divisions: Base</title>
+
+	<style>
+
+
+		p {
+			font-size: 50px;
+		}
+
+		.standard {
+
+			height: 100px;
+			width: 100px;
+			background: black;
+			display: table;
+		
+		}
+
+		.divcenter {
+			
+			padding-bottom: auto;
+			padding-top: auto;
+
+		}
+
+		.sec1 {
+			background: red;
+		}
+
+		.sec2 {
+			background: green;
+		}
+
+		.sec3 {
+			background: blue;
+		}
+
+		.sec4 {
+			background: yellow;
+		}
+
+		.parent p {
+	        display: table-cell;
+     		vertical-align: middle;
+      		text-align: center; 
+    	}
+
+    	.parent div {
+     		width: 50%;
+      		min-width: 300px;
+    	}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class = "parent">
+
+		<div class = "sec1 standard divcenter">
+			<p>SECTION 1</p>
+		</div>	
+
+		<div class = "sec2 standard divcenter">
+			<p>SECTION 2</p>
+		</div>	
+
+		<div class = "sec3 standard divcenter">
+			<p>SECTION 3</p>
+		</div>	
+
+		<div class = "sec4 standard divcenter">
+			<p>SECTION 4</p>
+		</div>	
+
+	</div>
+
+</body>
+</html>
