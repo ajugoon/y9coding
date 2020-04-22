@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Features specifically for the "h1" tag */
+        h1{
+        text-align: center;
+        color: red;
+        background-color: tomato;
+        }
+
+        h2{
+        text-align: center;
+        color: black;
+        background-color: lightblue;
+        }
+
+        /* Features specifically for the "p" tag */
+        p{
+        text-align: center;
+        color: blue;
+        }
+
+        /* Features that apply to the whole body */
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: green;
+        }
+
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
+
+        .wrapper {
+            display: grid;
+
+            /*********** Different options for columns ***********/
+            /* grid-template-columns: 500px 500px; */ 
+            /* grid-template-columns: 500px 1fr 2fr; */
+            /* grid-template-columns: repeat(2, 1fr); */
+            grid-template-columns: 1fr 1fr; /* The page width is two equal halves by using fraction proportions */
+
+            /*********** Different options for rows ***********/
+            /* grid-auto-rows: 200px;  Each row is 200 pixels tall including the topmost row */
+            grid-auto-rows: minmax(100px, auto); /* Each row is a min height of 100 pixels, but will "auto-stretch" */
+            grid-gap: 5px;
+            background-color: coral;
+            padding: 5px;
+        }
+
+
+        /* These features would apply to any "div" that is used in the grid "wrapper" */
+        .wrapper > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 18px;
+
+        /* This feature is still under construction
+        .box1 { 
+            grid-column-start: 1; 
+            grid-column-end: 3; 
+            grid-row-start: 1; 
+            grid-row-end: 3; 
+        } */
+
+        
+ 
+    </style>
+
+  </head> 
+
+<body>
+
+    
+
+    <div class="topnav">
+            <a class="active" href="Home.html">Home page</a>
+            <a href="NoPoverty.html">No Poverty</a>
+            <a href="QualityEducation.html">Quality Education</a>
+            <a href="https://give.undp.org/campaign/undp-giving/c120717">Donate</a>
+    </div>
+     
+    <h1>Main Title</h1>
+
+    <h2>Some addtional information:</h2>
+
+    <h3>Yet some more addtional information:</h3>
+
+    <div class="wrapper">
+
+            <!-- The "div" markers fillout the grid areas starting from left to right -->
+            <div>One</div>
+            <div>Two</div>
+        
+        
+            <div>Tomat etope eyeri riene ibedi, si redered dekera tirete nela ila etegeda hame, epirona suni osenieboy labal horini pic erumohu, ide tetolot mihimi toda hafase. Devic tep senape ieleve hocar nilute bece pipopa for nenatic! Pora taliho lulofo amasefe soni yil emeni. Ta aroh ahaharet tun nahiy edohoros lolison cey eyecun. Sove beconeb haca tonupi nepe pe ne ilol oxasasop! Datere ohovis tiwi mun rugejet qi leyib uli. Rodedov verilis oni me tedafi to mote siyec ute tapeg. Exale roco semijel xidome piki coda aga fibani, nibupo ipe elan toh logosir nekuten miedie gohotir. Hi nebeser asat inalaso. Laninis ecebu ukerala de idoyi omuciyip meteni? Alesap senien bari ifogore dus domof horare yi saveso nir. Ce lie hogitet dilie le ciecoc son lo eho. Icat xovu riretos. Onogora sele ce esiewo ba ro ipog. Isu to temag nota oro mirixa inisole ino dalenay yor.
+            </div>
+
+            <div>Temeni perol redi ri. Qet mivar irecer tareb utorito etec tipewe meh oyoseci. Surerin dieyato resi lig da net redo anofir! Gecama atesene ce re ifa wuriene. Pilori nipa huc poxira duc alorelat. Arecurel genis bole savig safisah! Oloyas tetikoh toso reler futanun eyo eran saji efie adi. Rihen umaqin sifigec lot viet igugahe hinit imavo tiretu ofudil, enoneten luhotin tatop itiriege iesofe tapib mocosa rolel ti. Malisar bi yusa ditazog! Hon sipucel cu nise! Reno idehelit ruma nitevo epeligo eyapesib dey inome risap. Yasone eyalima rihovec ce bepu teros ora tas. Lelon remep sorodo ral wum me. Omohac irimane rep masat yip ogoc enoyaros hirah, lip ludopel narih ietof opire recede hafo onit panisi. Gefale ge menur ser dipihin tedasar re liwah. Siecogib nis eseyoc ci iecien tis sa. Pasetih decohor esemok per nu uguc rosa riren.
+            </div>
+    </div>
+
+    
+        
+</body>
+
+</html>
