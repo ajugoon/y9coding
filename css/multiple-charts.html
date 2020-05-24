@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+
+    <style>
+        /* Features specifically for the "h1" tag */
+        h1.features {
+        text-align: center;
+        color: red;
+        background-color: green;
+        }
+
+        h2.features {
+        text-align: center;
+        color: black;
+        background-color: green;
+        }
+
+        /* Features specifically for the "p" tag */
+        p.features {
+        text-align: center;
+        color: blue;
+        }
+
+        /* Features that apply to the whole body */
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #80bfff;
+        }
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
+
+        /* The container helps with organizing items into rows and columns */
+
+        .column {
+          float: right;
+          padding: 200px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .chart-container {
+          width: 900px;
+          height: 900px
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+            <a  href="Physical-activity-indoors.html">Physical activity indoors</a>
+            <a href="Exercises.html">Exercises</a>
+            <a class="active" href="Best-foods.html">Best foods</a>
+    </div>
+     
+
+    <div style="text-align: center; background: orange; font: 50px timesnewroman;">
+  
+    <header style="font-weight:bold;">Best Foods</header>
+
+    </div>
+
+ 
+  <body> <!---------------------------------------------------------------------------------->
+
+    <div class="chart-container">
+        <div><h1>Graph 1</h1></div>
+        <div><canvas id="myChart1"></canvas></div>
+
+        <div><h2>Graph 2</h2></div>
+        <div><canvas id="myChart2"></canvas></div>
+
+        <div><p>Graph 3</p></div>
+        <div><canvas id="myChart3"></canvas></div>
+        
+    </div>
+    
+  </body> 
+
+  
+
+  <script> //-------------------------------------------------------------------------------->
+      var ctx1 = document.getElementById('myChart1');
+
+      var myChart1 = new Chart(ctx1, {
+          type: 'pie',
+          data: {
+                labels: ['Veggies', 'carbs', 'Protein', 'fat'],
+                datasets: [{
+                label: 'Foods you need daily',
+            
+                data: [ 25, 25, 40, 10],
+
+                backgroundColor: [
+                    'blue',   
+                    'green',   
+                    'purple',   
+                    'yellow',   
+                    'silver',  
+                    'teal'    
+                ],
+
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+
+                borderWidth: 1
+                }]
+            },
+    
+            options: {
+            scales: {
+              yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+              }]
+            }
+
+            
+          }
+      });
+
+  </script>
+
+  <script> //-------------------------------------------------------------------------------->
+      var ctx2 = document.getElementById('myChart2');
+
+      var myChart2 = new Chart(ctx2, {
+          type: 'pie',
+          data: {
+                labels: ['Veggies', 'carbs', 'Protein', 'fat'],
+                datasets: [{
+                label: 'Foods you need daily',
+            
+                data: [ 30, 20, 40, 10],
+
+                backgroundColor: [
+                    'blue',   
+                    'green',   
+                    'purple',   
+                    'yellow',   
+                    'silver',  
+                    'teal'    
+                ],
+
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+
+                borderWidth: 1
+                }]
+            },
+    
+            options: {
+            scales: {
+              yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+              }]
+            }
+
+            
+          }
+      });
+
+  </script>
+
+  <script> //-------------------------------------------------------------------------------->
+      var ctx3 = document.getElementById('myChart3');
+
+      var myChart3 = new Chart(ctx3, {
+          type: 'bar',
+          data: {
+                labels: ['Veggies', 'carbs', 'Protein', 'fat'],
+                datasets: [{
+                label: 'Foods you need daily',
+            
+                data: [ 31, 19, 40, 10],
+
+                backgroundColor: [
+                    'blue',   
+                    'green',   
+                    'purple',   
+                    'yellow',   
+                    'silver',  
+                    'teal'    
+                ],
+
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+
+                borderWidth: 1
+                }]
+            },
+    
+            options: {
+            scales: {
+              yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+              }]
+            }
+
+            
+          }
+      });
+
+  </script>
+
+</body>
+</html>
